@@ -1,0 +1,14 @@
+[project]
+name = "cudamode"
+version = "0.1.0"
+description = "Programming Massively Parallel Programs book notes"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "catppuccin-jupyterlab",
+  "jupyterlab",
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "plotly",
+]

@@ -1,0 +1,39 @@
+[project]
+name = "cudabook"
+version = "0.1.0"
+description = "Programming Massively Parallel Programs book notes"
+authors = ["igodlab"]
+channels = [
+    "https://conda.modular.com/max-nightly/",
+    "conda-forge"
+]
+platforms = ["linux-64"]
+
+# Core dependencies
+[dependencies]
+modular = "*"
+jupyterlab = "*"
+python = ">=3.12"
+
+# Jupyter themes and extensions
+# [pypi-dependencies]
+# jupyterlab-catppuccin = "*"  # Catppuccin theme for Jupyter Lab
+
+# Useful tasks
+[tasks]
+jupyter_lab = "jupyter lab"
+mojo = "mojo"
+modular = "modular"
+
+# Check Mojo installation
+[tasks.check]
+cmd = "mojo --version && modular --version"
+
+# Start Jupyter with Mojo kernel (if available)
+[tasks.notebook]
+cmd = "jupyter lab --allow-root"
+
+# Setup Catppuccin theme and extensions
+# [tasks.setup-theme]
+# cmd = "jupyter labextension list"
+# depends-on = ["install"]
